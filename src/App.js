@@ -3,8 +3,10 @@ import { Container, Row, Col } from 'react-grid-system';
 import api from './utils/api';
 import Teams from './components/teams.component';
 import SearchInputTeam from './components/search-input-team.component';
+import { Spinner, SpinnerSize } from '@blueprintjs/core';
 
 function App() {
+  const [isRequesting, setIsRequesting] = useState(false);
   const [teams, setTeams] = useState([]);
 
   const [searchParams, setSearchParams] = useState({
@@ -13,6 +15,8 @@ function App() {
   });
 
   useEffect(() => {
+    setIsRequesting(true);
+
     async function fetchData() {
       try {
         const params = {
@@ -30,6 +34,8 @@ function App() {
         // TODO: add message in modal
         alert(error);
       }
+
+      setIsRequesting(false);
     }
 
     fetchData();
@@ -50,7 +56,11 @@ function App() {
             <SearchInputTeam onSubmitHandle={onSearchSubmitHandle} />
           </div>
 
-          <Teams teams={teams} />
+          {isRequesting ? (
+            <Spinner size={SpinnerSize.SMALL} />
+          ) : (
+            <Teams teams={teams} />
+          )}
         </Col>
         <Col sm={4}>
           <h2>Last Matches</h2>
