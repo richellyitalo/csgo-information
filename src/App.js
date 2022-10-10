@@ -3,14 +3,15 @@ import { Container, Row, Col } from 'react-grid-system';
 import api from './utils/api';
 import Teams from './components/teams.component';
 import SearchInputTeam from './components/search-input-team.component';
-import { Spinner, SpinnerSize } from '@blueprintjs/core';
+import { Icon, Spinner, SpinnerSize } from '@blueprintjs/core';
+import Header from './components/header.component';
 
 function App() {
   const [isRequesting, setIsRequesting] = useState(false);
   const [teams, setTeams] = useState([]);
 
   const [searchParams, setSearchParams] = useState({
-    location: 'BR',
+    location: '',
     name: '',
   });
 
@@ -49,11 +50,9 @@ function App() {
   };
 
   return (
-    <Container className="app mt-5">
-      <h1 className="mb-0 text-yellow-800">
-        CSGO Information <small>by @richellyitalo</small>
-      </h1>
-      <hr className="my-4" />
+    <Container className="app mt-5 pb-10">
+      <Header />
+
       <Row>
         <Col sm={8}>
           <SearchInputTeam onSubmitHandle={onSearchSubmitHandle} />

@@ -28,7 +28,7 @@ const SearchInputTeam = (props) => {
     },
   };
 
-  const [countryLocation, setCountryLocation] = useState(OPTIONS.BRAZIL.slug);
+  const [countryLocation, setCountryLocation] = useState();
 
   const searchInputRef = useRef();
 
