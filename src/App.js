@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 import api from './utils/api';
 import Teams from './components/teams.component';
@@ -24,7 +24,7 @@ function App() {
         };
 
         const response = await api.get('/teams', { params });
-        console.log(response.headers); // total pages ...
+        // console.log(response.headers); // total pages ...
         setTeams(response.data);
       } catch (error) {
         // TODO: add message in modal
