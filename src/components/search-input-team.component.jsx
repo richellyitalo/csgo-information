@@ -43,7 +43,7 @@ const SearchInputTeam = (props) => {
     setCountryLocation(event.target.value);
   };
 
-  const onClickSubmit = (values) => {
+  const onClickSubmit = () => {
     onSubmitHandle({
       location: countryLocation,
       name: searchInputRef.current.value,
@@ -51,19 +51,24 @@ const SearchInputTeam = (props) => {
   };
 
   return (
-    <ControlGroup>
-      <HTMLSelect
-        options={optionsCountry}
-        onChange={onCountryChangeHandle}
-        value={countryLocation}
-      />
-      <InputGroup
-        inputRef={searchInputRef}
-        placeholder="Enter with a team name..."
-        onSubmit={onClickSubmit}
-      />
-      <Button icon="arrow-right" onClick={onClickSubmit} />
-    </ControlGroup>
+    <div className="mb-5">
+      <ControlGroup>
+        <HTMLSelect
+          options={optionsCountry}
+          onChange={onCountryChangeHandle}
+          value={countryLocation}
+        />
+        <InputGroup
+          inputRef={searchInputRef}
+          placeholder="Enter with a team name..."
+          onKeyDown={(event) =>
+            event.key === 'Enter' ? onClickSubmit() : null
+          }
+          autoFocus={true}
+        />
+        <Button icon="arrow-right" onClick={onClickSubmit} />
+      </ControlGroup>
+    </div>
   );
 };
 

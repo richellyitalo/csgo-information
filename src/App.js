@@ -50,14 +50,18 @@ function App() {
 
   return (
     <Container className="app mt-5">
+      <h1 className="mb-0 text-yellow-800">
+        CSGO Information <small>by @richellyitalo</small>
+      </h1>
+      <hr className="my-4" />
       <Row>
         <Col sm={8}>
-          <div className="mb-5">
-            <SearchInputTeam onSubmitHandle={onSearchSubmitHandle} />
-          </div>
+          <SearchInputTeam onSubmitHandle={onSearchSubmitHandle} />
 
           {isRequesting ? (
             <Spinner size={SpinnerSize.SMALL} />
+          ) : teams.length === 0 ? (
+            <p className="p-5 bg-slate-100">Sorry. No results found</p>
           ) : (
             <Teams teams={teams} />
           )}
