@@ -1,4 +1,4 @@
-import { Row, Col } from 'react-grid-system';
+import { Row } from 'react-grid-system';
 
 import TeamItem from './team-item.component';
 
@@ -8,7 +8,7 @@ const Teams = (props) => {
   return (
     <Row style={{ alignItems: 'stretch' }}>
       {teams.map((team) => (
-        <TeamItem team={team} />
+        <TeamItem key={team.id} team={team} />
       ))}
     </Row>
   );

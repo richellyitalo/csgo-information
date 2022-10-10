@@ -3,8 +3,7 @@ import PlayerDetail from './player-detail.component';
 
 const DialogTeam = (props) => {
   const { onHandleClose, isOpen } = props;
-  const { name, players } = props.team;
-  console.log(isOpen);
+  const { id, name, players } = props.team;
 
   return (
     <Dialog
@@ -12,10 +11,11 @@ const DialogTeam = (props) => {
       hasBackdrop={false}
       title={name}
       onClose={onHandleClose}
+      key={id}
     >
       <div className={Classes.DIALOG_BODY}>
         {players.map((player) => (
-          <PlayerDetail player={player} />
+          <PlayerDetail key={player.id} player={player} />
         ))}
       </div>
       <div className={Classes.DIALOG_FOOTER}>

@@ -17,14 +17,14 @@ const TeamItem = (props) => {
   };
 
   return (
-    <Col md={6} lg={4} className="mb-3 items-stretch flex">
+    <Col md={6} lg={4} className="mb-3 items-stretch flex" key={team.id}>
       <Card interactive={false} elevation={Elevation.TWO} className="w-full">
         <h3 className="mt-0 text-center">{name}</h3>
         <div className="flex">
           <div className="flex-1 w-50">
             <ul className="list-none text1 p-2 m-0">
               {players.map((player) => (
-                <li>
+                <li key={player.id}>
                   <Icon icon="person" className="mr-1" />
                   {player.name}
                 </li>

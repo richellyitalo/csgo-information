@@ -60,6 +60,7 @@ const SearchInputTeam = (props) => {
       <InputGroup
         inputRef={searchInputRef}
         placeholder="Enter with a team name..."
+        onSubmit={onClickSubmit}
       />
       <Button icon="arrow-right" onClick={onClickSubmit} />
     </ControlGroup>
