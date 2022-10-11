@@ -66,7 +66,7 @@ const SearchInputTeam = (props) => {
           }
           autoFocus={true}
         />
-        <Button icon="arrow-right" onClick={onClickSubmit} />
+        <Button icon="arrow-right" intent="warning" onClick={onClickSubmit} />
       </ControlGroup>
     </div>
   );

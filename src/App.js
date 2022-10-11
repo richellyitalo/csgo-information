@@ -3,16 +3,21 @@ import { Container, Row, Col } from 'react-grid-system';
 import api from './utils/api';
 import Teams from './components/teams.component';
 import SearchInputTeam from './components/search-input-team.component';
-import { Icon, Spinner, SpinnerSize } from '@blueprintjs/core';
+import { Spinner, SpinnerSize } from '@blueprintjs/core';
 import Header from './components/header.component';
+import { default as cs } from 'classnames';
+import Pagination from './components/pagination.component';
 
 function App() {
   const [isRequesting, setIsRequesting] = useState(false);
   const [teams, setTeams] = useState([]);
+  const [total, setTotal] = useState(null);
 
   const [searchParams, setSearchParams] = useState({
     location: '',
     name: '',
+    currentPage: 1,
+    perPage: 12,
   });
 
   useEffect(() => {
@@ -23,13 +28,22 @@ function App() {
         const params = {
           'search[location]': searchParams.location,
           'search[name]': searchParams.name,
-          page: 1,
+          page: searchParams.currentPage,
           sort: '-modified_at',
-          per_page: 12,
+          per_page: searchParams.perPage,
         };
 
         const response = await api.get('/teams', { params });
+        setTotal(parseInt(response.headers['x-total']));
         // console.log(response.headers); // total pages ...
+
+        /*
+        x-page: "1"
+        x-per-page: "12"
+        x-rate-limit-remaining: "998"
+        x-rate-limit-used: "2"
+        x-total: "1785"
+        */
         setTeams(response.data);
       } catch (error) {
         // TODO: add message in modal
@@ -44,8 +58,17 @@ function App() {
 
   const onSearchSubmitHandle = (values) => {
     setSearchParams({
+      ...searchParams,
       location: values.location,
       name: values.name,
+      currentPage: 1,
+    });
+  };
+
+  const onCurrentChange = (page) => {
+    setSearchParams({
+      ...searchParams,
+      currentPage: page,
     });
   };
 
@@ -56,6 +79,14 @@ function App() {
       <Row>
         <Col sm={8}>
           <SearchInputTeam onSubmitHandle={onSearchSubmitHandle} />
+
+          <Pagination
+            total={total}
+            currentPage={searchParams.currentPage}
+            perPage={searchParams.perPage}
+            limitButtonsPage={4}
+            onHandleCurrentChange={onCurrentChange}
+          />
 
           {isRequesting ? (
             <Spinner size={SpinnerSize.SMALL} />
@@ -69,6 +100,8 @@ function App() {
           <h2>Last Matches</h2>
         </Col>
       </Row>
+
+      {/* -------- pagination */}
     </Container>
   );
 }
