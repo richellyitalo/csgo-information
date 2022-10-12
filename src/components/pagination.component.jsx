@@ -17,7 +17,6 @@ const Pagination = (props) => {
   }, [total]);
 
   useEffect(() => {
-    console.log('mudou total-pages', totalPages);
     const pageNumbers = [];
 
     for (let i = 1; i <= totalPages; i++) {
