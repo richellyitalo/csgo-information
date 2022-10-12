@@ -58,11 +58,11 @@ const MatchScore = (props) => {
 
       <Row>
         <Col sm={4} className="text-center">
-          {opponents[0].opponent.image_url && (
+          {opponentHome.image_url && (
             <>
               <img
                 src={`${opponentHome.image_url}`}
-                height={50}
+                height={35}
                 alt={`${opponentHome.name}`}
               />
               <br />
@@ -91,7 +91,7 @@ const MatchScore = (props) => {
           {opponentAway.image_url && (
             <img
               src={`${opponentAway.image_url}`}
-              height={50}
+              height={35}
               alt={`${opponentAway.name}`}
             />
           )}

@@ -1,5 +1,6 @@
 import { Card } from '@blueprintjs/core';
 import { Col, Row } from 'react-grid-system';
+import DateFormat from './date-format.component';
 
 const PlayerDetail = (props) => {
   const { player } = props;
@@ -19,7 +20,10 @@ const PlayerDetail = (props) => {
 
             {player.birthday && (
               <li>
-                Birthday <b>{player.birthday}</b>
+                Birthday{' '}
+                <b>
+                  <DateFormat date={player.birthday} />
+                </b>
               </li>
             )}
 
