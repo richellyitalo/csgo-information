@@ -13,10 +13,12 @@ const MatchStatus = (props) => {
       <div>
         {!isComming &&
           games.map((game) => {
+            const isGameFinished = game.status === 'finished';
+
             return (
               <Row key={game.id} className="text-center">
                 <Col className="text-center">
-                  {isFinished &&
+                  {isGameFinished &&
                     (game.winner.id === opponentHome.id ? (
                       <Icon icon="dot" intent="success" size={IconSize.LARGE} />
                     ) : (
@@ -25,7 +27,7 @@ const MatchStatus = (props) => {
                 </Col>
                 <Col>{game.status}</Col>
                 <Col className="text-center">
-                  {isFinished &&
+                  {isGameFinished &&
                     (game.winner.id === opponentAway.id ? (
                       <Icon icon="dot" intent="success" size={IconSize.LARGE} />
                     ) : (

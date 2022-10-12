@@ -36,7 +36,9 @@ function App() {
           params['search[location]'] = searchParams.location;
         }
 
+        
         const response = await api.get('/teams', { params });
+        console.log(response);
         setTotal(parseInt(response.headers['x-total']));
 
         setTeams(response.data);
@@ -92,7 +94,7 @@ function App() {
           )}
         </Col>
         <Col sm={4}>
-          {/* <Sidebar /> */}
+          <Sidebar />
         </Col>
       </Row>
 
