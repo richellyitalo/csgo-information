@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/csgo-information/static/css/main.b9b67633.css",
+    "main.js": "/csgo-information/static/js/main.70be31c4.js",
+    "static/js/787.e48b7d18.chunk.js": "/csgo-information/static/js/787.e48b7d18.chunk.js",
+    "static/media/blueprint-icons-20.eot?": "/csgo-information/static/media/blueprint-icons-20.2c5199273d4b2b64445d.eot",
+    "static/media/blueprint-icons-20.ttf?": "/csgo-information/static/media/blueprint-icons-20.f2c4d28fe854dc2ba785.ttf",
+    "static/media/blueprint-icons-16.eot?": "/csgo-information/static/media/blueprint-icons-16.bd725ce6ac35063c10ab.eot",
+    "static/media/blueprint-icons-16.ttf?": "/csgo-information/static/media/blueprint-icons-16.41dea48d5fcf813fe9e1.ttf",
+    "static/media/blueprint-icons-20.woff?": "/csgo-information/static/media/blueprint-icons-20.f4b46c5e139b2828cfc5.woff",
+    "static/media/blueprint-icons-16.woff?": "/csgo-information/static/media/blueprint-icons-16.899a0b746d6bc8d52190.woff",
+    "static/media/blueprint-icons-20.woff2?": "/csgo-information/static/media/blueprint-icons-20.cb04452f2829e25df5c3.woff2",
+    "static/media/blueprint-icons-16.woff2?": "/csgo-information/static/media/blueprint-icons-16.a0691f6f99d062fdb7de.woff2",
+    "index.html": "/csgo-information/index.html",
+    "main.b9b67633.css.map": "/csgo-information/static/css/main.b9b67633.css.map",
+    "main.70be31c4.js.map": "/csgo-information/static/js/main.70be31c4.js.map",
+    "787.e48b7d18.chunk.js.map": "/csgo-information/static/js/787.e48b7d18.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b9b67633.css",
+    "static/js/main.70be31c4.js"
+  ]
+}
