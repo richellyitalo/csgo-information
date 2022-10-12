@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/csgo-information/static/css/main.b9b67633.css",
-    "main.js": "/csgo-information/static/js/main.af818800.js",
+    "main.js": "/csgo-information/static/js/main.93bdb887.js",
     "static/js/787.e48b7d18.chunk.js": "/csgo-information/static/js/787.e48b7d18.chunk.js",
     "static/media/blueprint-icons-20.eot?": "/csgo-information/static/media/blueprint-icons-20.2c5199273d4b2b64445d.eot",
     "static/media/blueprint-icons-20.ttf?": "/csgo-information/static/media/blueprint-icons-20.f2c4d28fe854dc2ba785.ttf",
@@ -13,11 +13,11 @@
     "static/media/blueprint-icons-16.woff2?": "/csgo-information/static/media/blueprint-icons-16.a0691f6f99d062fdb7de.woff2",
     "index.html": "/csgo-information/index.html",
     "main.b9b67633.css.map": "/csgo-information/static/css/main.b9b67633.css.map",
-    "main.af818800.js.map": "/csgo-information/static/js/main.af818800.js.map",
+    "main.93bdb887.js.map": "/csgo-information/static/js/main.93bdb887.js.map",
     "787.e48b7d18.chunk.js.map": "/csgo-information/static/js/787.e48b7d18.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b9b67633.css",
-    "static/js/main.af818800.js"
+    "static/js/main.93bdb887.js"
   ]
 }
