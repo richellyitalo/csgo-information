@@ -15,10 +15,17 @@ const TeamItem = (props) => {
   const handleClose = () => {
     setIsOpen(false);
   };
-
+  // display: flex;
+  // align-content: space-around;
+  // flex-direction: column;
+  // justify-content: space-between;
   return (
-    <Col md={6} lg={4} className="mb-3 items-stretch flex" key={team.id}>
-      <Card interactive={false} elevation={Elevation.TWO} className="w-full">
+    <Col key={team.id} md={6} lg={4} className="mb-3 flex items-stretch">
+      <Card
+        interactive={false}
+        elevation={Elevation.TWO}
+        className="w-full flex place-content-between flex-col"
+      >
         <h3 className="mt-0 text-center">{name}</h3>
         <div className="flex">
           <div className="flex-1 w-50">
