@@ -92,7 +92,7 @@ function App() {
           )}
         </Col>
         <Col sm={4}>
-          <Sidebar />
+          {/* <Sidebar /> */}
         </Col>
       </Row>
 
