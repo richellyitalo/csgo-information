@@ -1,6 +1,4 @@
-import { Card, Icon, IconSize } from '@blueprintjs/core';
 import { useEffect, useState } from 'react';
-import { Col, Row } from 'react-grid-system';
 import api from '../utils/api';
 import MatchesList from './matches-list/matches-list.component';
 
