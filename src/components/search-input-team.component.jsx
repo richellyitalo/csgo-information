@@ -28,7 +28,7 @@ const SearchInputTeam = (props) => {
     },
   };
 
-  const [countryLocation, setCountryLocation] = useState();
+  const [countryLocation, setCountryLocation] = useState(null);
 
   const searchInputRef = useRef();
 

@@ -5,7 +5,7 @@ import Teams from './components/teams.component';
 import SearchInputTeam from './components/search-input-team.component';
 import { Spinner, SpinnerSize } from '@blueprintjs/core';
 import Header from './components/header.component';
-import { default as cs } from 'classnames';
+import Sidebar from './components/sidebar.component';
 import Pagination from './components/pagination.component';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
   const [total, setTotal] = useState(null);
 
   const [searchParams, setSearchParams] = useState({
-    location: '',
+    location: null,
     name: '',
     currentPage: 1,
     perPage: 12,
@@ -26,24 +26,19 @@ function App() {
     async function fetchData() {
       try {
         const params = {
-          'search[location]': searchParams.location,
           'search[name]': searchParams.name,
           page: searchParams.currentPage,
           sort: '-modified_at',
           per_page: searchParams.perPage,
         };
 
+        if (searchParams.location !== '' && searchParams.location !== null) {
+          params['search[location]'] = searchParams.location;
+        }
+
         const response = await api.get('/teams', { params });
         setTotal(parseInt(response.headers['x-total']));
-        // console.log(response.headers); // total pages ...
 
-        /*
-        x-page: "1"
-        x-per-page: "12"
-        x-rate-limit-remaining: "998"
-        x-rate-limit-used: "2"
-        x-total: "1785"
-        */
         setTeams(response.data);
       } catch (error) {
         // TODO: add message in modal
@@ -97,7 +92,7 @@ function App() {
           )}
         </Col>
         <Col sm={4}>
-          <h2>Last Matches</h2>
+          <Sidebar />
         </Col>
       </Row>
 
