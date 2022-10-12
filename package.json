@@ -2,6 +2,7 @@
   "name": "csgo-information",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://richellyitalo.com.br/",
   "homepage": "https://richellyitalo.github.io/csgo-information",
   "dependencies": {
     "@blueprintjs/core": "^4.11.2",

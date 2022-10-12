@@ -3,7 +3,7 @@ const Header = () => {
     <>
       <h1 className="mb-0 text-yellow-800">
         <span className="bg-slate-700 text-white px-1 rounded-sm">
-          <span className="text-yellow-300">CSGO</span> Information1
+          <span className="text-yellow-300">CSGO</span> Information
         </span>{' '}
         <a
           href="https://github.com/richellyitalo"
