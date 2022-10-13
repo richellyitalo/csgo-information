@@ -21,6 +21,8 @@ Provide informations about CSGO: Teams/Players and upcoming, current and past ma
 ## Deploy
 - Vercel
 
+## Screenshot
+![Screenshot](/screenshot.png "Screenshot")
 
 ## Author
 Richelly Italo
