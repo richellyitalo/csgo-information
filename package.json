@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "https://richellyitalo.com.br/",
-  "homepage": "https://richellyitalo.github.io/csgo-information",
+  "homepage": "https://csgo-information.vercel.app",
+  "homepage2": "https://richellyitalo.github.io/csgo-information",
   "dependencies": {
     "@blueprintjs/core": "^4.11.3",
     "@testing-library/jest-dom": "^5.16.5",
