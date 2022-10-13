@@ -1,5 +1,5 @@
 ## Dev
-Richelly Italo
+[Richelly Italo](https://github.com/richellyitalo)
 ## Objective
 
 Provide informations about CSGO: Teams/Players and upcoming, current and past matches too.
