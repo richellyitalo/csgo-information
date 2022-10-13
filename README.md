@@ -1,5 +1,3 @@
-## Dev
-[Richelly Italo](https://github.com/richellyitalo)
 ## Objective
 
 Provide informations about CSGO: Teams/Players and upcoming, current and past matches too.
@@ -21,3 +19,10 @@ Provide informations about CSGO: Teams/Players and upcoming, current and past ma
 ## Deploy
 - Vercel
 
+
+## Author
+Richelly Italo
+
+[Linkedin](https://github.com/richellyitalo)
+
+[Twitter](https://twitter.com/richellyItalo)
