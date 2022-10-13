@@ -1,5 +1,6 @@
 # CSGO Information (Teams/Players/Matches)
-Access in https://csgo-information.vercel.app/
+Provided in https://csgo-information.vercel.app/
+
 ## Objective
 
 Provide informations about CSGO: Teams/Players and upcoming, current and past matches too.
