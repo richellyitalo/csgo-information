@@ -50,9 +50,9 @@ const MatchStatus = (props) => {
           <Icon icon="calendar" />
 
           {isFinished ? (
-            <DateFormat date={end_at} />
+            <DateFormat date={end_at} showHour={true} />
           ) : (
-            <DateFormat date={begin_at} />
+            <DateFormat date={begin_at} showHour={true} />
           )}
         </p>
       )}
