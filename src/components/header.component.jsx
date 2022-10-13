@@ -6,7 +6,7 @@ const Header = () => {
           <span className="text-yellow-300">CSGO</span> Information
         </span>{' '}
         <a
-          href="https://github.com/richellyitalo"
+          href="https://github.com/richellyitalo?tab=repositories&q=csgo-information"
           rel="noreferrer"
           target="_blank"
           className="text-sm text-gray-600 hover:text-yellow-600 hover:no-underline"
