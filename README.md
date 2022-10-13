@@ -1,3 +1,4 @@
+# CSGO Information (Teams/Players/Matches)
 ## Objective
 
 Provide informations about CSGO: Teams/Players and upcoming, current and past matches too.
