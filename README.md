@@ -8,7 +8,7 @@ Provide informations about CSGO: Teams/Players and upcoming, current and past ma
 - React
 - Blueprintjs (framework CSS)
 - Axios
-- Tailwind
+- Tailwind CSS
 - Normalize
 - React Grid System
 - Classnames
