@@ -28,6 +28,6 @@ Provide informations about CSGO: Teams/Players and upcoming, current and past ma
 ## Author
 Richelly Italo
 
-[Linkedin](https://github.com/richellyitalo)
+[Linkedin](https://linkedin.com/in/richellyitalo/)
 
 [Twitter](https://twitter.com/richellyItalo)
