@@ -1,4 +1,4 @@
-import { Button, Pre } from '@blueprintjs/core';
+import { Button } from '@blueprintjs/core';
 import { useEffect, useState } from 'react';
 
 const Pagination = (props) => {
@@ -14,7 +14,7 @@ const Pagination = (props) => {
 
   useEffect(() => {
     setTotalPages(Math.ceil(total / perPage));
-  }, [total]);
+  }, [total, perPage]);
 
   useEffect(() => {
     const pageNumbers = [];
@@ -26,7 +26,7 @@ const Pagination = (props) => {
     }
 
     setButtonNumbers(pageNumbers);
-  }, [totalPages, currentPage]);
+  }, [totalPages, currentPage, limitButtonsPage]);
 
   if (props.total === 0 || totalPages <= 1) {
     return null;

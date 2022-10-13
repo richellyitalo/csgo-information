@@ -1,5 +1,4 @@
 import { Card } from '@blueprintjs/core';
-import isEmpty from '../../utils/is-empty';
 import MatchHeader from './match-header.component';
 import MatchScore from './match-score.component';
 

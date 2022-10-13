@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const TOKEN = `Bearer ${process.env.REACT_APP_TOKEN_API}`;
+// const TOKEN = `Bearer ${process.env.REACT_APP_TOKEN_API}`;
 
 // const config = {
 //   headers: { Authorization: TOKEN, 'Access-Control-Allow-Origin': '*' },

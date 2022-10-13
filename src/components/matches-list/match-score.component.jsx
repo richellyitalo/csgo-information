@@ -5,16 +5,7 @@ import cs from 'classnames';
 
 const MatchScore = (props) => {
   const { match, isFinished } = props;
-  const {
-    number_of_games,
-    opponents,
-    live,
-    games,
-    begin_at,
-    end_at,
-    winner,
-    results,
-  } = match;
+  const { number_of_games, opponents, live, games, winner, results } = match;
   const opponentHome = opponents[0].opponent;
   const opponentAway = opponents[1].opponent;
 
