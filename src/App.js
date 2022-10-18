@@ -38,7 +38,6 @@ function App() {
 
         
         const response = await api.get('/teams', { params });
-        console.log(response);
         setTotal(parseInt(response.headers['x-total']));
 
         setTeams(response.data);
