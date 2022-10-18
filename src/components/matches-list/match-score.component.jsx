@@ -5,7 +5,9 @@ import cs from 'classnames';
 
 const MatchScore = (props) => {
   const { match, isFinished } = props;
-  const { number_of_games, opponents, live, games, winner, results } = match;
+  const { number_of_games, opponents, streams_list, games, winner, results } =
+    match;
+  const isRunning = match.status === 'running';
   const opponentHome = opponents[0].opponent;
   const opponentAway = opponents[1].opponent;
 
@@ -64,18 +66,21 @@ const MatchScore = (props) => {
 
         <Col sm={4} className="text-center">
           <ScoreComponent />
-          {live.url && (
-            <div className="text-center">
-              <a
-                href={`${live.url}`}
-                target="_blank"
-                rel="noreferrer"
-                className=""
-              >
-                Watch Live
-              </a>
-            </div>
-          )}
+          
+          {isRunning &&
+            streams_list.length > 0 &&
+            streams_list.map((streamList, i) => (
+              <div className="text-center" key={i}>
+                <a
+                  href={`${streamList.raw_url}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className=""
+                >
+                  Watch #{i + 1}
+                </a>
+              </div>
+            ))}
         </Col>
 
         <Col sm={4} className="text-center">
